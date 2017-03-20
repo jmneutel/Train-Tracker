@@ -26,7 +26,7 @@ $("#submit-btn").on("click", function(event) {
     var frequency = $("#frequency-input").val().trim();
 
 
-    // Creates local "temporary" object for holding employee data
+    // Creates local "temporary" object for holding train data
     var newTrain = {
         trainName: trainName,
         destination: destination,
@@ -86,6 +86,3 @@ database.ref().on("child_added", function(childSnapshot, prevChildKey) {
             $("#train-table > tbody").append("<tr><td>" + trainName + "</td><td>" + destination + "</td><td>" +
                 frequency + "</td><td>" + nextArrival + "</td><td>" + tMinutesTillTrain + "</td></tr>");
             });
-
-
-
